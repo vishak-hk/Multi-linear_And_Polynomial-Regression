@@ -1,1 +1,1 @@
-# Multi-linear_And_Polynomial-Regression
+# Multi-linear & Polynomial Regression
