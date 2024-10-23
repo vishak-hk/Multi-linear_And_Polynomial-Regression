@@ -33,15 +33,17 @@ We fit a **Multi-Linear Regression** model to the training data using the `Linea
 - Training the model on the training data.
 - Predicting the heating load for the test data.
 - Evaluating the model using metrics like:
-  - **Mean Squared Error (MSE)**
-  - **Coefficient of Determination (R²)**
+  - **Mean Squared Error (MSE)**: `0.09002`
+  - **Coefficient of Determination (R²)**: `0.91218`
 
 ### 6. Polynomial Regression
 We extend our analysis to **Polynomial Regression** using the `PolynomialFeatures` class from `sklearn`. This includes:
 - Transforming the features into polynomial terms.
 - Fitting a polynomial regression model to the training data.
 - Predicting heating load using the transformed features.
-- Evaluating the polynomial regression model based on **MSE** and **R²** metrics.
+- Evaluating the polynomial regression model based on:
+  - **Mean Squared Error (MSE)**: `0.00604`
+  - **Coefficient of Determination (R²)**: `0.99411`
 
 ### 7. Comparison of Models
 We compare the performance of the **Multi-Linear Regression** and **Polynomial Regression** models to understand which method provides better accuracy in predicting the heating load. This comparison is based on:
@@ -49,10 +51,19 @@ We compare the performance of the **Multi-Linear Regression** and **Polynomial R
 - **R² (Coefficient of Determination)**
 
 ## Results
-The performance of both models is evaluated and the results (MSE and R²) are printed to assess their accuracy. A comparison between multi-linear and polynomial regression will highlight the most effective approach for this specific dataset.
+
+- **Multi-Linear Regression Results:**
+  - **MSE:** 0.09002
+  - **R² Score:** 0.91218
+  
+- **Polynomial Regression Results:**
+  - **MSE:** 0.00604
+  - **R² Score:** 0.99411
 
 ## Conclusion
-This project showcases how different regression techniques can be used to predict energy efficiency in buildings. By comparing the results of multi-linear and polynomial regression, we can determine which model offers better performance in predicting heating loads, helping to optimize energy usage in building designs.
+The comparison of the two models shows that **Polynomial Regression** significantly outperforms **Multi-Linear Regression** in predicting the heating load of buildings. The polynomial model has a much lower **Mean Squared Error (0.00604)** compared to the multi-linear model (0.09002), indicating that it makes more accurate predictions. Additionally, the **R² score** of the polynomial model (0.99411) is much closer to 1, suggesting that it explains the variance in the target variable far better than the multi-linear model (R² = 0.91218).
+
+This suggests that a more complex, non-linear relationship between the features and the heating load provides better predictive power for this dataset.
 
 ---
 
@@ -67,10 +78,3 @@ This project showcases how different regression techniques can be used to predic
   - `r2_score`
 
 ---
-
-## How to Run
-1. Clone the repository.
-2. Install the necessary dependencies using:
-   ```bash
-   pip install -r requirements.txt
-
